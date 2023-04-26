@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root[data-color-mode="light"] {
+    font-size: 62.5%;
+    --ff-body: 'Roboto', sans-serif;
+    --bg-color: #ffffff;
+    --bg-card1: rgb(177, 177, 177);
+    --bg-card2: hsla(194, 97%, 31%, 1);
+    --primary-color: hsla(240, 6%, 21%, 1);
+    --secondary-color: hsl(0, 0%, 100%);
+}
+
+:root[data-color-mode="dark"] {
+    font-size: 62.5%;
+    --ff-body: 'Roboto', sans-serif;
+    --bg-color: hsl(240, 5%, 7%);
+    --bg-card1: hsl(0, 0%, 75%);
+    --bg-card2: hsl(196, 64%, 30%);
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: hsl(0, 0%, 100%);
+    --vol-color: hsl(0, 0%, 1%);
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 10vw;
+    padding: 19rem 3rem;
+}
+
+.hide {
+    display: none;
+}
+
+span {
+    font-weight: 500;
+    font-size: 12rem;
+    font-family: var(--ff-body);
+    color: var(--primary-color);
+}
+
+.timerWrapper {
+    align-self: center;
+    justify-self: center;
+}    
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    gap: 4.0rem;
+}
+
+button svg path {
+    fill: var(--primary-color);
+}
+
+#sounds-buttons{
+    display: grid;
+    grid-template-areas: "a b"
+    "c d";
+    gap: 3.2rem;   
+}
+  
+#sounds-buttons .pattern-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+  
+    background-color: var(--bg-card1);
+  
+    width: 13.8rem;
+    height: 15.2rem;
+  
+    border-radius: 2.4rem;
+}
+  
+.progress{
+    background: var(--vol-color);
+    accent-color: var(--primary-color);
+    width: 10rem;
+    height:.5rem;
+    left: 2.5rem;
+    bottom: 2rem;
+    border-radius: 1.5rem;
+    
+    outline: none;
+}
+  
+  
+#sounds-buttons .pattern-card:hover{
+    cursor: pointer;
+    background-color: var(--bg-card2);
+}
+
+#sounds-buttons .pattern-card:hover svg path, .selected svg path {
+    fill: var(--secondary-color);
+}
+
+#sounds-buttons .forest-card{
+    grid-area: a;
+}
+  
+#sounds-buttons .rain-card{
+    grid-area: b;
+}
+  
+#sounds-buttons .coffeeTable-card{
+    grid-area: c;
+}
+  
+#sounds-buttons .firePlace-card{
+    grid-area: d;
+}
+
+.lightDark {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+  
+    cursor: pointer;
+}
+
+:root[data-color-mode="light"] .hidden_in_light_mode {
+    display: none;
+}
+  
+:root[data-color-mode="dark"] .hidden_in_dark_mode {
+    display: none;
+}
+  
+.color_mode_button {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding: 5px;
+    margin: 0 auto 1.5rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    border-radius: 50px;
+}
+  
+.color_mode_button svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+}
