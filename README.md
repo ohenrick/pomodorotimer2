@@ -27,8 +27,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Screenshots
 Desktop - Light Mode:
+
 ![App Screenshot](https://i.imgur.com/fqvA7EM.png)
 Mobile - Dark mode
+
 ![App Screenshot](https://i.imgur.com/OSpTFFT.png)
 
 ## Instalação
